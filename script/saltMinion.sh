@@ -3,6 +3,6 @@ curl -o /etc/yum.repos.d/saltstack-zeromq4-epel-7.repo https://copr.fedoraprojec
 sleep 15
 yum install salt-minion -y
 sleep 15
-echo 'master: 156.80.52.109' >> /etc/salt/minion
+echo 'master: {master.ip.goes.here}' >> /etc/salt/minion
 systemctl enable salt-minion.service
 systemctl start salt-minion.service
