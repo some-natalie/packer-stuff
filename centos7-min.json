@@ -23,15 +23,10 @@
     }],
 
   "provisioners": [{
-    "type": "file",
-    "source":"vboxadd/VBoxLinuxAdditions.run",
-    "destination":"/tmp/VBoxLinuxAdditions.run"
-  },
-    {
     "type": "shell",
     "scripts": [
       "script/updateYum.sh",
-      "script/installVboxAdditions.sh"
+      "script/saltMinion.sh"
     ],
     "execute_command": "echo 'vagrant' | sh '{{ .Path }}'"
   }]
